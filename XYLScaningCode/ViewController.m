@@ -41,7 +41,10 @@
     self.view.backgroundColor = [UIColor blackColor];
     [self setupButton];
     [self payCodeSelected];
+    //设置生成二维码界面
     self.binaryCodeView = [[XYLBinaryCodeView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    //设置二维码的内容
+    self.binaryCodeView.inputData = @"www.baidu.com";
     [self.view insertSubview:self.binaryCodeView atIndex:1];
 }
 
@@ -160,9 +163,11 @@
  */
 - (void)initOverView
 {
-    _overView = [[XYLScanView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    _overView.delegate = self;
-    [self.view insertSubview:_overView atIndex:1];
+    if (!_overView) {
+        _overView = [[XYLScanView alloc]initWithFrame:[UIScreen mainScreen].bounds lineMode:XYLScaningLineModeImge ineMoveMode:XYLScaningLineMoveModeUpAndDown];
+        _overView.delegate = self;
+        [self.view insertSubview:_overView atIndex:1];
+    }
 }
 
 - (void)view:(UIView *)view didCatchGesture:(UIGestureRecognizer *)gesture{
@@ -177,6 +182,7 @@
     }
 }
 
+//设置导航条模式
 - (void)initUI{
     
     if (self.navigationController) {
@@ -193,6 +199,7 @@
 
 - (void)pan:(UIPanGestureRecognizer *)pan{}
 
+//设置扫描反馈模式：这里是声音提示
 - (void)config{
     _tone = XYLScaningWarningToneSound;
 }
@@ -283,9 +290,18 @@
         [session stopRunning];
         [self saveInformation:msg];
         [self playSystemSoundWithStyle:_tone];
-//        self.backValue(msg);
-        NSLog(@"%@",msg);
-        [self backButtonActioin:nil];
+        
+        [self.overView stopMove];
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:msg preferredStyle:UIAlertControllerStyleActionSheet];
+        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"扫描出来结果%@",msg);
+            //todo：在这里添加扫描结果后的处理
+            [self.overView removeFromSuperview];
+            self.overView = nil;
+            [self payCodeSelected];
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
     }else
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"读取失败" preferredStyle:UIAlertControllerStyleActionSheet];
@@ -314,6 +330,9 @@
     return [formatter stringFromDate:[NSDate date]];
 }
 
+/**
+ *  展示声音提示
+ */
 - (void)playSystemSoundWithStyle:(XYLScaningWarningTone)tone{
     
     NSString *path = [NSString stringWithFormat:@"%@/scan.wav", [[NSBundle mainBundle] resourcePath]];

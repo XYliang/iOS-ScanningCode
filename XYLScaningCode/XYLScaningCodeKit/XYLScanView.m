@@ -7,12 +7,11 @@
 //
 
 #import "XYLScanView.h"
-#import "Config.h"
+
 
 @interface XYLScanView()
-@property (assign , nonatomic) XYLScaningLineMoveMode lineMoveMode;
-@property (assign, nonatomic) XYLScaningLineMode lineMode;
-@property (assign, nonatomic) XYLScaningWarningTone warninTone;
+
+
 @property (strong, nonatomic) UIView *line;
 @property (strong, nonatomic) NSTimer *timer;
 @property (assign, nonatomic) CGFloat origin;
@@ -21,15 +20,15 @@
 
 @implementation XYLScanView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame lineMode:(XYLScaningLineMode)lineMode ineMoveMode:(XYLScaningLineMoveMode)lineMoveMode{
     self = [super initWithFrame:frame];
     if (self) {
-        [self initConfig];
+        [self initConfigWithLineMode:lineMode ineMoveMode:lineMoveMode];
     }
     return self;
 }
 
-- (void)initConfig
+- (void)initConfigWithLineMode:(XYLScaningLineMode)lineMode ineMoveMode:(XYLScaningLineMoveMode)lineMoveMode
 {
     self.backgroundColor = [UIColor clearColor];
     //添加滑动返回手势
@@ -38,13 +37,12 @@
     [edgePanGesture setEdges:UIRectEdgeLeft];
     [self addGestureRecognizer:edgePanGesture];
     //设置扫描模式
-    self.lineMode = XYLScaningLineModeDeafult;
-    self.lineMoveMode = XYLScaningLineMoveModeDown;
+    self.lineMode = lineMode ? lineMode : XYLScaningLineModeDeafult;
+    self.lineMoveMode = lineMoveMode ? lineMoveMode : XYLScaningLineMoveModeDown;
     //创建扫描线
     self.line = [self creatLine];
     [self addSubview:self.line];
     [self starMove];
-    
 }
 
 - (void)gesture:(UIScreenEdgePanGestureRecognizer *)edgePanGesture{
@@ -111,6 +109,15 @@
             iv.frame = CGRectMake(0, -TransparentArea([self width], [self height]).height, _line.frame.size.width, TransparentArea([self width], [self height]).height);
             [self starMove];
         }];
+    }
+}
+
+-(void)stopMove
+{
+    [self.line removeFromSuperview];
+    self.line = nil;
+    if (_lineMode == XYLScaningLineModeDeafult) {  //注意！！！此模式非常消耗性能
+        [self.timer invalidate];
     }
 }
 

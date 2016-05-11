@@ -23,9 +23,14 @@
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor blackColor];
         [self setupView];
-        [self createBinaryCode];
     }
     return self;
+}
+
+-(void)setInputData:(NSString *)inputData
+{
+    _inputData = inputData;
+    [self createBinaryCode];
 }
 
 -(void)setupView
@@ -53,7 +58,7 @@
     [fiter setDefaults];
     
     // 3.设置输入数据
-    NSString *inputData = @"http://www.baidu.com";
+    NSString *inputData = self.inputData;
     NSData *data = [inputData dataUsingEncoding:NSUTF8StringEncoding];
     [fiter setValue:data forKeyPath:@"inputMessage"];
     

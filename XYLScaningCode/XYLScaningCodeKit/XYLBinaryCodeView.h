@@ -10,6 +10,7 @@
 
 @interface XYLBinaryCodeView : UIView
 @property(strong, nonatomic)UIImageView *imageView;
+@property(strong, nonatomic)NSString *inputData;//设置二维码内容字符串：例如设置二维码包含的内容是inputData=@"www.baidu.com"
 - (NSInteger)setWidth;
 - (NSInteger)height;
 @end

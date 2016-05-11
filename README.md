@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/XYliang/GithubImages/1a99c709db503f7ffcef9ecd2339fc2f7afbc6d2/GithubXYL.png" width = "150" height = "150" alt="图片名称" align=center />
 # iOS-ScanningCode
   * Support for generating two-dimensional code, two-dimensional code scanning. 
-  * 支持生成二维码，扫描二维码。
+  * 支持生成二维码，扫描二维码、条形码。
   
 ##Image Displey(图片展示)
 <img src="https://raw.githubusercontent.com/XYliang/GithubImages/1a99c709db503f7ffcef9ecd2339fc2f7afbc6d2/iOS_ScanningCode/1.png" width = "375" height = "667" alt="图片名称" align=center />
@@ -24,13 +24,13 @@
 
 @interface ViewController ()<UIAlertViewDelegate, AVCaptureMetadataOutputObjectsDelegate, XYLScanViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
-    AVCaptureDevice *frontCamera;  //前置摄像机
-    AVCaptureDevice *backCamera;  //后置摄像机
-    AVCaptureSession *session;         //捕捉对象
-    AVCaptureVideoPreviewLayer *previewLayer;
-    AVCaptureInput *input;              //输入流
-    AVCaptureMetadataOutput *output;//输出流
-    BOOL isTorchOn;
+AVCaptureDevice *frontCamera;  //前置摄像机
+AVCaptureDevice *backCamera;  //后置摄像机
+AVCaptureSession *session;         //捕捉对象
+AVCaptureVideoPreviewLayer *previewLayer;
+AVCaptureInput *input;              //输入流
+AVCaptureMetadataOutput *output;//输出流
+BOOL isTorchOn;
 }
 
 @property (nonatomic, assign) XYLScaningWarningTone tone;
@@ -45,7 +45,10 @@
 
 * 创建并添加生成二维码界面
 ```objc
+//设置生成二维码界面
 self.binaryCodeView = [[XYLBinaryCodeView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//设置二维码的内容
+self.binaryCodeView.inputData = @"www.baidu.com";
 [self.view insertSubview:self.binaryCodeView atIndex:1];
 ```
 * 创建并添加扫描二维码界面
@@ -80,13 +83,15 @@ self.binaryCodeView = [[XYLBinaryCodeView alloc]initWithFrame:[UIScreen mainScre
 }
 
 /**
- *  添加扫码视图
- */
+*  添加扫码视图
+*/
 - (void)initOverView
 {
-    _overView = [[XYLScanView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    _overView.delegate = self;
-    [self.view insertSubview:_overView atIndex:1];
+    if (!_overView) {
+        _overView = [[XYLScanView alloc]initWithFrame:[UIScreen mainScreen].bounds lineMode:XYLScaningLineModeGrid ineMoveMode:XYLScaningLineMoveModeUpAndDown];
+        _overView.delegate = self;
+        [self.view insertSubview:_overView atIndex:1];
+    }
 }
 
 - (void)initCapture
@@ -166,21 +171,31 @@ self.binaryCodeView = [[XYLBinaryCodeView alloc]initWithFrame:[UIScreen mainScre
 }
 
 /**
- *  读取扫描结果
- */
+*  读取扫描结果
+*/
 - (void)readingFinshedWithMessage:(NSString *)msg
 {
     if (msg) {
         [session stopRunning];
         [self saveInformation:msg];
         [self playSystemSoundWithStyle:_tone];
-        NSLog(@"%@",msg);
-        [self backButtonActioin:nil];
+
+        [self.overView stopMove];
+
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:msg preferredStyle:UIAlertControllerStyleActionSheet];
+        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"扫描出来结果%@",msg);
+            //todo：在这里添加扫描结果后的处理
+            [self.overView removeFromSuperview];
+            self.overView = nil;
+            [self payCodeSelected];
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
     }else
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"读取失败" preferredStyle:UIAlertControllerStyleActionSheet];
         [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            NSLog(@"点击了确定");
+        NSLog(@"点击了确定");
         }]];
         [self presentViewController:alert animated:true completion:nil];
     }

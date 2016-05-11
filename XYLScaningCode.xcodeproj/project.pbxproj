@@ -15,13 +15,13 @@
 		733440621C7AB4FD0053C7E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733440601C7AB4FD0053C7E7 /* LaunchScreen.storyboard */; };
 		7334406D1C7AB4FE0053C7E7 /* XYLScaningCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7334406C1C7AB4FE0053C7E7 /* XYLScaningCodeTests.m */; };
 		733440781C7AB4FE0053C7E7 /* XYLScaningCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 733440771C7AB4FE0053C7E7 /* XYLScaningCodeUITests.m */; };
-		733440871C7AB8B30053C7E7 /* scan.wav in Resources */ = {isa = PBXBuildFile; fileRef = 733440861C7AB8B30053C7E7 /* scan.wav */; };
-		7334408A1C7AB8E30053C7E7 /* XYLScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 733440891C7AB8E30053C7E7 /* XYLScanView.m */; };
-		7334408D1C7ABAC30053C7E7 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7334408C1C7ABAC30053C7E7 /* line@2x.png */; };
-		7334408F1C7AE8EA0053C7E7 /* scan_net@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7334408E1C7AE8EA0053C7E7 /* scan_net@2x.png */; };
-		7362F85E1C7BF377002F30E4 /* XYLToolButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7362F85D1C7BF377002F30E4 /* XYLToolButton.m */; };
-		7362F8611C7BF720002F30E4 /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7362F8601C7BF720002F30E4 /* UIView+extension.m */; };
-		7362F8641C7C3692002F30E4 /* XYLBinaryCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7362F8631C7C3692002F30E4 /* XYLBinaryCodeView.m */; };
+		7389D5491CE2E09A00C1FA27 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7389D53E1CE2E09A00C1FA27 /* line@2x.png */; };
+		7389D54A1CE2E09A00C1FA27 /* scan.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7389D53F1CE2E09A00C1FA27 /* scan.wav */; };
+		7389D54B1CE2E09A00C1FA27 /* scan_net@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7389D5401CE2E09A00C1FA27 /* scan_net@2x.png */; };
+		7389D54C1CE2E09A00C1FA27 /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7389D5421CE2E09A00C1FA27 /* UIView+extension.m */; };
+		7389D54D1CE2E09A00C1FA27 /* XYLBinaryCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7389D5441CE2E09A00C1FA27 /* XYLBinaryCodeView.m */; };
+		7389D54E1CE2E09A00C1FA27 /* XYLScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7389D5461CE2E09A00C1FA27 /* XYLScanView.m */; };
+		7389D54F1CE2E09A00C1FA27 /* XYLToolButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7389D5481CE2E09A00C1FA27 /* XYLToolButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,18 +58,18 @@
 		733440731C7AB4FE0053C7E7 /* XYLScaningCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYLScaningCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		733440771C7AB4FE0053C7E7 /* XYLScaningCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYLScaningCodeUITests.m; sourceTree = "<group>"; };
 		733440791C7AB4FE0053C7E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		733440861C7AB8B30053C7E7 /* scan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scan.wav; sourceTree = "<group>"; };
-		733440881C7AB8E30053C7E7 /* XYLScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLScanView.h; sourceTree = "<group>"; };
-		733440891C7AB8E30053C7E7 /* XYLScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLScanView.m; sourceTree = "<group>"; };
-		7334408B1C7AB9D10053C7E7 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		7334408C1C7ABAC30053C7E7 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
-		7334408E1C7AE8EA0053C7E7 /* scan_net@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan_net@2x.png"; sourceTree = "<group>"; };
-		7362F85C1C7BF377002F30E4 /* XYLToolButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLToolButton.h; sourceTree = "<group>"; };
-		7362F85D1C7BF377002F30E4 /* XYLToolButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLToolButton.m; sourceTree = "<group>"; };
-		7362F85F1C7BF720002F30E4 /* UIView+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+extension.h"; sourceTree = "<group>"; };
-		7362F8601C7BF720002F30E4 /* UIView+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+extension.m"; sourceTree = "<group>"; };
-		7362F8621C7C3691002F30E4 /* XYLBinaryCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLBinaryCodeView.h; sourceTree = "<group>"; };
-		7362F8631C7C3692002F30E4 /* XYLBinaryCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLBinaryCodeView.m; sourceTree = "<group>"; };
+		7389D53D1CE2E09A00C1FA27 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		7389D53E1CE2E09A00C1FA27 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
+		7389D53F1CE2E09A00C1FA27 /* scan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scan.wav; sourceTree = "<group>"; };
+		7389D5401CE2E09A00C1FA27 /* scan_net@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan_net@2x.png"; sourceTree = "<group>"; };
+		7389D5411CE2E09A00C1FA27 /* UIView+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+extension.h"; sourceTree = "<group>"; };
+		7389D5421CE2E09A00C1FA27 /* UIView+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+extension.m"; sourceTree = "<group>"; };
+		7389D5431CE2E09A00C1FA27 /* XYLBinaryCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLBinaryCodeView.h; sourceTree = "<group>"; };
+		7389D5441CE2E09A00C1FA27 /* XYLBinaryCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLBinaryCodeView.m; sourceTree = "<group>"; };
+		7389D5451CE2E09A00C1FA27 /* XYLScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLScanView.h; sourceTree = "<group>"; };
+		7389D5461CE2E09A00C1FA27 /* XYLScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLScanView.m; sourceTree = "<group>"; };
+		7389D5471CE2E09A00C1FA27 /* XYLToolButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLToolButton.h; sourceTree = "<group>"; };
+		7389D5481CE2E09A00C1FA27 /* XYLToolButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLToolButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,24 +120,16 @@
 		733440511C7AB4FD0053C7E7 /* XYLScaningCode */ = {
 			isa = PBXGroup;
 			children = (
-				733440851C7AB8750053C7E7 /* Resources */,
+				7389D53B1CE2E09A00C1FA27 /* XYLScaningCodeKit */,
 				733440551C7AB4FD0053C7E7 /* AppDelegate.h */,
 				733440561C7AB4FD0053C7E7 /* AppDelegate.m */,
 				733440581C7AB4FD0053C7E7 /* ViewController.h */,
 				733440591C7AB4FD0053C7E7 /* ViewController.m */,
-				733440881C7AB8E30053C7E7 /* XYLScanView.h */,
-				733440891C7AB8E30053C7E7 /* XYLScanView.m */,
-				7362F8621C7C3691002F30E4 /* XYLBinaryCodeView.h */,
-				7362F8631C7C3692002F30E4 /* XYLBinaryCodeView.m */,
-				7362F85C1C7BF377002F30E4 /* XYLToolButton.h */,
-				7362F85D1C7BF377002F30E4 /* XYLToolButton.m */,
 				7334405B1C7AB4FD0053C7E7 /* Main.storyboard */,
 				7334405E1C7AB4FD0053C7E7 /* Assets.xcassets */,
 				733440601C7AB4FD0053C7E7 /* LaunchScreen.storyboard */,
 				733440631C7AB4FD0053C7E7 /* Info.plist */,
 				733440521C7AB4FD0053C7E7 /* Supporting Files */,
-				7362F85F1C7BF720002F30E4 /* UIView+extension.h */,
-				7362F8601C7BF720002F30E4 /* UIView+extension.m */,
 			);
 			path = XYLScaningCode;
 			sourceTree = "<group>";
@@ -168,13 +160,29 @@
 			path = XYLScaningCodeUITests;
 			sourceTree = "<group>";
 		};
-		733440851C7AB8750053C7E7 /* Resources */ = {
+		7389D53B1CE2E09A00C1FA27 /* XYLScaningCodeKit */ = {
 			isa = PBXGroup;
 			children = (
-				7334408E1C7AE8EA0053C7E7 /* scan_net@2x.png */,
-				7334408C1C7ABAC30053C7E7 /* line@2x.png */,
-				7334408B1C7AB9D10053C7E7 /* Config.h */,
-				733440861C7AB8B30053C7E7 /* scan.wav */,
+				7389D53C1CE2E09A00C1FA27 /* Resources */,
+				7389D5411CE2E09A00C1FA27 /* UIView+extension.h */,
+				7389D5421CE2E09A00C1FA27 /* UIView+extension.m */,
+				7389D5431CE2E09A00C1FA27 /* XYLBinaryCodeView.h */,
+				7389D5441CE2E09A00C1FA27 /* XYLBinaryCodeView.m */,
+				7389D5451CE2E09A00C1FA27 /* XYLScanView.h */,
+				7389D5461CE2E09A00C1FA27 /* XYLScanView.m */,
+				7389D5471CE2E09A00C1FA27 /* XYLToolButton.h */,
+				7389D5481CE2E09A00C1FA27 /* XYLToolButton.m */,
+			);
+			path = XYLScaningCodeKit;
+			sourceTree = "<group>";
+		};
+		7389D53C1CE2E09A00C1FA27 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7389D53D1CE2E09A00C1FA27 /* Config.h */,
+				7389D53E1CE2E09A00C1FA27 /* line@2x.png */,
+				7389D53F1CE2E09A00C1FA27 /* scan.wav */,
+				7389D5401CE2E09A00C1FA27 /* scan_net@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -282,10 +290,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7389D5491CE2E09A00C1FA27 /* line@2x.png in Resources */,
+				7389D54A1CE2E09A00C1FA27 /* scan.wav in Resources */,
 				733440621C7AB4FD0053C7E7 /* LaunchScreen.storyboard in Resources */,
-				7334408D1C7ABAC30053C7E7 /* line@2x.png in Resources */,
-				733440871C7AB8B30053C7E7 /* scan.wav in Resources */,
-				7334408F1C7AE8EA0053C7E7 /* scan_net@2x.png in Resources */,
+				7389D54B1CE2E09A00C1FA27 /* scan_net@2x.png in Resources */,
 				7334405F1C7AB4FD0053C7E7 /* Assets.xcassets in Resources */,
 				7334405D1C7AB4FD0053C7E7 /* Main.storyboard in Resources */,
 			);
@@ -312,13 +320,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7362F8641C7C3692002F30E4 /* XYLBinaryCodeView.m in Sources */,
-				7362F85E1C7BF377002F30E4 /* XYLToolButton.m in Sources */,
 				7334405A1C7AB4FD0053C7E7 /* ViewController.m in Sources */,
-				7362F8611C7BF720002F30E4 /* UIView+extension.m in Sources */,
-				7334408A1C7AB8E30053C7E7 /* XYLScanView.m in Sources */,
+				7389D54F1CE2E09A00C1FA27 /* XYLToolButton.m in Sources */,
+				7389D54D1CE2E09A00C1FA27 /* XYLBinaryCodeView.m in Sources */,
 				733440571C7AB4FD0053C7E7 /* AppDelegate.m in Sources */,
 				733440541C7AB4FD0053C7E7 /* main.m in Sources */,
+				7389D54E1CE2E09A00C1FA27 /* XYLScanView.m in Sources */,
+				7389D54C1CE2E09A00C1FA27 /* UIView+extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
