@@ -164,7 +164,7 @@
 - (void)initOverView
 {
     if (!_overView) {
-        _overView = [[XYLScanView alloc]initWithFrame:[UIScreen mainScreen].bounds lineMode:XYLScaningLineModeImge ineMoveMode:XYLScaningLineMoveModeUpAndDown];
+        _overView = [[XYLScanView alloc]initWithFrame:[UIScreen mainScreen].bounds lineMode:XYLScaningLineModeDeafult ineMoveMode:XYLScaningLineMoveModeUpAndDown];
         _overView.delegate = self;
         [self.view insertSubview:_overView atIndex:1];
     }

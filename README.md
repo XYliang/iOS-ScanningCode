@@ -1,14 +1,15 @@
 
-<img src="https://raw.githubusercontent.com/XYliang/GithubImages/1a99c709db503f7ffcef9ecd2339fc2f7afbc6d2/GithubXYL.png" width = "150" height = "150" alt="图片名称" align=center />
+<img src="https://github.com/XYliang/GithubImages/blob/master/GithubXYLIcon/GithubXYLIcon.png?raw=true" width = "150" height = "150" alt="图片名称" align=center />
 # iOS-ScanningCode
   * Support for generating two-dimensional code, two-dimensional code scanning. 
   * 支持生成二维码，扫描二维码、条形码。
   
 ##Image Displey(图片展示)
-<img src="https://raw.githubusercontent.com/XYliang/GithubImages/1a99c709db503f7ffcef9ecd2339fc2f7afbc6d2/iOS_ScanningCode/1.png" width = "375" height = "667" alt="图片名称" align=center />
-<img src="https://raw.githubusercontent.com/XYliang/GithubImages/1a99c709db503f7ffcef9ecd2339fc2f7afbc6d2/iOS_ScanningCode/3.PNG" width = "375" height = "667" alt="图片名称" align=center />
+<img src="https://github.com/XYliang/GithubImages/blob/master/iOS-ScanningCode/1.PNG?raw=true" width = "375" height = "667" alt="图片名称" align=center />
+<img src="https://github.com/XYliang/GithubImages/blob/master/iOS-ScanningCode/2.PNG?raw=true" width = "375" height = "667" alt="图片名称" align=center />
 
-<img src="https://raw.githubusercontent.com/XYliang/GithubImages/1a99c709db503f7ffcef9ecd2339fc2f7afbc6d2/iOS_ScanningCode/2.png" width = "375" height = "667" alt="图片名称" align=center />
+<img src="https://github.com/XYliang/GithubImages/blob/master/iOS-ScanningCode/4.PNG?raw=true" width = "375" height = "667" alt = "图片名称" align = center />
+<img src="https://github.com/XYliang/GithubImages/blob/master/iOS-ScanningCode/5.PNG?raw=true" width = "375" height = "667" alt = "图片名称" align = center />
 
 ##Getting Start(开始使用)
 
