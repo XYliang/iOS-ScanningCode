@@ -70,6 +70,7 @@
 		7389D5461CE2E09A00C1FA27 /* XYLScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLScanView.m; sourceTree = "<group>"; };
 		7389D5471CE2E09A00C1FA27 /* XYLToolButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLToolButton.h; sourceTree = "<group>"; };
 		7389D5481CE2E09A00C1FA27 /* XYLToolButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLToolButton.m; sourceTree = "<group>"; };
+		7389D5531CE32E1E00C1FA27 /* XYLScaningCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYLScaningCode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +173,7 @@
 				7389D5461CE2E09A00C1FA27 /* XYLScanView.m */,
 				7389D5471CE2E09A00C1FA27 /* XYLToolButton.h */,
 				7389D5481CE2E09A00C1FA27 /* XYLToolButton.m */,
+				7389D5531CE32E1E00C1FA27 /* XYLScaningCode.h */,
 			);
 			path = XYLScaningCodeKit;
 			sourceTree = "<group>";
