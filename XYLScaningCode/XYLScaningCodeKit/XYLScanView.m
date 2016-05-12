@@ -171,10 +171,28 @@
 
 - (void)addWhiteRect:(CGContextRef)ctx rect:(CGRect)rect
 {
+    /**
+     *  绘制rect路径
+     Quartz uses the line width and stroke color of the graphics state to paint the path. As a side effect when you call this function, Quartz clears the current path:解释：Quartz使用指定线宽和颜色来绘制路径，但是有一个副作用 就是绘制前会清空之前的路径
+     */
     CGContextStrokeRect(ctx, rect);
+    /**
+     *  绘制刚才的路径的颜色
+     Quartz sets the current stroke color to the value specified by the red, green, blue, and alpha parameters.解释：使用提供的红绿蓝透明度来绘制指定的路径
+     */
     CGContextSetRGBStrokeColor(ctx, 1, 1, 1, 1);
+    /**
+     *  设置线宽
+     */
     CGContextSetLineWidth(ctx, 0.8);
+    /**
+     *  把画出的图形添加到上下文
+     This is a convenience function that adds a rectangle to a path：添加矩形到上下文
+     */
     CGContextAddRect(ctx, rect);
+    /**
+     *  开始绘制图片
+     */
     CGContextStrokePath(ctx);
 }
 
