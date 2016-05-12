@@ -137,6 +137,9 @@
     [self presentViewController:simulatorAlert animated:YES completion:nil];
 
 #elif TARGET_OS_IPHONE
+        
+    //判断相机权限
+    [self isVideoUseable];
     self.binaryCodeView.hidden = YES;
     if (self.overView) {
         self.overView.hidden = NO;
@@ -149,6 +152,18 @@
         [self addGesture];
     }
 #endif
+    }
+}
+
+-(void)isVideoUseable
+{
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if (authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied) {
+        UIAlertController *simulatorAlert = [UIAlertController alertControllerWithTitle:nil message:@"相机权限未开通，请打开" preferredStyle:UIAlertControllerStyleActionSheet];
+        [simulatorAlert addAction:[UIAlertAction actionWithTitle:@"好吧" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            return;
+        }]];
+        [self presentViewController:simulatorAlert animated:YES completion:nil];
     }
 }
 
